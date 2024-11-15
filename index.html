@@ -1,0 +1,136 @@
+<html><head><base href="http://localhost:3000/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arthur Pucineli - Motorista Particular</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .profile {
+    position: relative;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #0ff;
+    animation: neonPulse 2s infinite;
+  }
+
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .car-container {
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 4px solid #f0f;
+    animation: neonPulse 2s infinite alternate;
+  }
+
+  .car-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    margin: 20px 0;
+  }
+
+  .description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    text-shadow: 0 0 5px #f0f;
+    animation: textGlow 2s infinite alternate;
+  }
+
+  .whatsapp-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #25d366, #128C7E);
+    border-radius: 30px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px #25d366;
+    transition: all 0.3s ease;
+    animation: buttonPulse 1.5s infinite;
+  }
+
+  @keyframes neonPulse {
+    0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; }
+    100% { box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff; }
+  }
+
+  @keyframes textGlow {
+    0% { text-shadow: 0 0 5px #f0f, 0 0 10px #f0f; }
+    100% { text-shadow: 0 0 10px #f0f, 0 0 20px #f0f; }
+  }
+
+  @keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="/IMG-20241115-WA0030.jpg" alt="Foto de Arthur Pucineli, motorista profissional sorrindo" width="200" height="200">
+    </div>
+
+    <h1>Arthur Pucineli</h1>
+    <h2 style="color: #0ff; text-shadow: 0 0 10px #0ff;">Motorista Particular</h2>
+
+    <div class="car-container">
+      <img src="/carro.jpg" alt="Carro branco Volkswagen Polo, moderno e confortável" class="car-image" width="600" height="400">
+    </div>
+
+    <div class="description">
+      <p>🚗 Serviço de Motorista Particular Disponível 24 Horas!</p>
+      <p>📍 Atendendo Praia Grande, São Paulo e Região</p>
+      <p>✈️ Disponível para Viagens</p>
+      <p>🌟 Conforto, Segurança e Pontualidade</p>
+    </div>
+
+    <a href="https://wa.me/5511948804042?text=Olá%20Arthur,%20gostaria%20de%20solicitar%20uma%20viagem" class="whatsapp-btn">
+      Solicitar uma Viagem
+    </a>
+  </div>
+
+  <script>
+    // Adiciona efeito de hover no botão
+    document.querySelector('.whatsapp-btn').addEventListener('mouseover', function() {
+      this.style.transform = 'scale(1.1)';
+    });
+
+    document.querySelector('.whatsapp-btn').addEventListener('mouseout', function() {
+      this.style.transform = 'scale(1)';
+    });
+  </script>
+</body></html>
